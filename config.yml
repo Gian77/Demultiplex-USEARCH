@@ -1,25 +1,25 @@
 # This is the config file for demultiplx-usearch.sb #
 
 # main dir
-project_dir="/mnt/research/bonito_lab/Ashlyn_Nico_test"
+project_dir="/mnt/home/benucci/Demultiplex-illumina"
 
 # NOTE!!! Modify all the PATHs below accordingly. 
 
 # Miseq raw files
-R1="/mnt/research/bonito_lab/Ashlyn_Nico_test/rawdata/*R1_001.fastq"
-R2="/mnt/research/bonito_lab/Ashlyn_Nico_test/rawdata/*R2_001.fastq"
-I1="/mnt/research/bonito_lab/Ashlyn_Nico_test/rawdata/*I1_001.fastq"
+R1="/mnt/home/benucci/Demultiplex-illumina/rawdata/*R1_001.fastq"
+R2="//mnt/home/benucci/Demultiplex-illumina/rawdata/*R2_001.fastq"
+I1="/mnt/home/benucci/Demultiplex-illumina/rawdata/*I1_001.fastq"
 
 # bacrodes in a .fasta format
-index="/mnt/research/bonito_lab/Ashlyn_Nico_test/rawdata/barcodes.fasta"
-index_RC="/mnt/research/bonito_lab/Ashlyn_Nico_test/rawdata/barcodes_RC.fasta"
+index="/mnt/home/benucci/Demultiplex-illumina/rawdata/barcodes.fasta"
+index_RC="/mnt/home/benucci/Demultiplex-illumina/rawdata/barcodes_RC.fasta"
 
 # output dir
-output_dir="/mnt/research/bonito_lab/Ashlyn_Nico_test/output_dir"
+output_dir="/mnt/home/benucci/Demultiplex-illumina/output_dir"
 
 # output files
-out_R1="/mnt/research/bonito_lab/Ashlyn_Nico_test/output_dir/R1_demux.fastq"
-out_R2="/mnt/research/bonito_lab/Ashlyn_Nico_test/output_dir/R2_demux.fastq"
+out_R1="/mnt/home/benucci/Demultiplex-illumina/output_dir/R1_demux.fastq"
+out_R2="/mnt/home/benucci/Demultiplex-illumina/output_dir/R2_demux.fastq"
 
-out_R1_RC="/mnt/research/bonito_lab/Ashlyn_Nico_test/output_dir/R1_demux_RC.fastq"
-out_R2_RC="/mnt/research/bonito_lab/Ashlyn_Nico_test/output_dir/R2_demux_RC.fastq"
+out_R1_RC="/mnt/home/benucci/Demultiplex-illumina/output_dir/R1_demux_RC.fastq"
+out_R2_RC="/mnt/home/benucci/Demultiplex-illumina/output_dir/R2_demux_RC.fastq"
