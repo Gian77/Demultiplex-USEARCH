@@ -36,8 +36,8 @@ echo -e "\n========== Running USEARCH ==========\n"
 
 echo -e "\n========== Running python script and cat ==========\n"
 
-python $project_dir/code/readRC.py $out_R1 $output_dir/R1_demux_PM.fastq
-python $project_dir/code/readRC.py $out_R2 $output_dir/R2_demux_PM.fastq
+python $project_dir/readRC.py $out_R1 $output_dir/R1_demux_PM.fastq
+python $project_dir/readRC.py $out_R2 $output_dir/R2_demux_PM.fastq
 
 cat $out_R1_RC $output_dir/R1_demux_PM.fastq > $output_dir/R1_demux_combined.fastq
 cat $out_R2_RC $output_dir/R2_demux_PM.fastq > $output_dir/R2_demux_combined.fastq
