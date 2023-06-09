@@ -1,0 +1,5 @@
+# files NOT to be tracked
+
+rawdata/*.fastq
+
+

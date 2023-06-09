@@ -1,0 +1,54 @@
+#!/bin/bash -login
+
+#SBATCH --time=03:59:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=64G
+#SBATCH --job-name demultiplex
+#SBATCH --output=slurm-%A_demultiplexing-usearch.out 
+
+cd ${SLURM_SUBMIT_DIR}
+cores=$SLURM_CPUS_PER_TASK
+RAM=$SLURM_MEM_PER_NODE
+
+source ./config.yml
+
+echo -e "\n mkdir -p $output_dir \n"; mkdir -p $output_dir
+
+echo -e "\n========== Running USEARCH ==========\n"
+
+/mnt/research/rdp/public/thirdParty/usearch11.0.667_i86linux64 \
+	-fastx_demux $R1\
+	-reverse $R2 \
+	-index $I1 \
+	-barcodes $index \
+	-fastqout $out_R1 \
+	-output2 $out_R2
+
+/mnt/research/rdp/public/thirdParty/usearch11.0.667_i86linux64 \
+	-fastx_demux $R1\
+	-reverse $R2 \
+	-index $I1 \
+	-barcodes $index_RC \
+	-fastqout $out_R1_RC \
+	-output2 $out_R2_RC
+
+echo -e "\n========== Running python script and cat ==========\n"
+
+python $project_dir/code/readRC.py $out_R1 $output_dir/R1_demux_PM.fastq
+python $project_dir/code/readRC.py $out_R2 $output_dir/R2_demux_PM.fastq
+
+cat $out_R1_RC $output_dir/R1_demux_PM.fastq > $output_dir/R1_demux_combined.fastq
+cat $out_R2_RC $output_dir/R2_demux_PM.fastq > $output_dir/R2_demux_combined.fastq
+
+echo -e "\n========== count all reads in files ==========\n"
+
+for file in $output_dir/*fastq; do 
+	echo "$file: `echo $(cat $file | wc -l)/4 | bc`"; 
+done > $output_dir/fastqRead.counts
+
+echo -e "\n========== Sbatch log ==========\n"
+echo -e "\n Current directory: `pwd` \n"
+echo -e "\n `sacct -u benucci -j $SLURM_JOB_ID --format=JobID,JobName,Start,End,Elapsed,NCPUS,ReqMem` \n"
+scontrol show job $SLURM_JOB_ID
