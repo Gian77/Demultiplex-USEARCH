@@ -1,9 +1,9 @@
 #!/bin/bash -login
 
-#SBATCH --time=03:59:00
+#SBATCH --time=06:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
 #SBATCH --job-name demultiplex
 #SBATCH --output=slurm-%A_demultiplexing-usearch.out 
@@ -47,6 +47,8 @@ echo -e "\n========== count all reads in files ==========\n"
 for file in $output_dir/*fastq; do 
 	echo "$file: `echo $(cat $file | wc -l)/4 | bc`"; 
 done > $output_dir/fastqRead.counts
+
+cat $output_dir/fastqRead.counts
 
 echo -e "\n========== Sbatch log ==========\n"
 echo -e "\n Current directory: `pwd` \n"
