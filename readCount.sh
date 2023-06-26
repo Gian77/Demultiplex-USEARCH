@@ -20,7 +20,19 @@ read=$2
 total_count=0
 
 # Loop through each FASTQ file
-for file in "$input_dir"/*_R[12].fastq; do
+for file in "$input_dir"/*_R1.fastq; do
+	line_count=$(wc -l < "$file")
+	sequence_count=$((line_count / 4))
+
+	echo "$file:" "$sequence_count" >> "$input_dir"/Sample_"$read".counts
+
+	# Generate the total counts
+	total_count=$((total_count + sequence_count))
+done
+
+echo "Total:" "$total_count" >> "$input_dir"/Sample_"$read".counts
+
+for file in "$input_dir"/*_R2.fastq; do
 	line_count=$(wc -l < "$file")
 	sequence_count=$((line_count / 4))
 
