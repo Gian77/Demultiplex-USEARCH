@@ -7,7 +7,7 @@
 #SBATCH --mem=64G
 #SBATCH --job-name demultiplex
 #SBATCH -A glbrc
-#SBATCH --output=slurm-%A_demultiplexing-usearch.out 
+#SBATCH --output=results-demultiplex.log
 
 cd ${SLURM_SUBMIT_DIR}
 cores=$SLURM_CPUS_PER_TASK
@@ -22,6 +22,11 @@ echo -e "\n========== Generating reverse complmeneted barcodes ==========\n"
 python $project_dir/barcodeRC.py $index
 
 index_RC=$(echo $index | cut -d"." -f1)
+
+if test -f $project_dir/rawdata/${index_RC}_rc.fasta; then
+	echo -e "Reverse complemented file generated.\nFirst 5 barcodes as follows:"
+	head $project_dir/rawdata/${index_RC}_rc.fasta
+fi
 
 echo -e "\n========== Running USEARCH on barcodes ==========\n"
 
@@ -53,21 +58,28 @@ cat $project_dir/output_dir/R1_demux_revcomp.fastq \
 cat $project_dir/output_dir/R2_demux_revcomp.fastq \
 	$project_dir/output_dir/R2_demux_RC.fastq > $project_dir/output_dir/R2_demux_combined.fastq
 
-echo -e "\n========== count all reads in files ==========\n"
+echo -e "\n========== Split into single sample files ==========\n"
 
+python $project_dir/splitDemuxFastq.py $project_dir/output_dir/R1_demux_combined.fastq $project_dir/output_dir R1
+python $project_dir/splitDemuxFastq.py $project_dir/output_dir/R2_demux_combined.fastq $project_dir/output_dir R2
+
+sh $project_dir/readCount.sh $project_dir/output_dir R1
+sh $project_dir/readCount.sh $project_dir/output_dir R2
+
+if test -f $project_dir/output_dir/Sample*.fasta; then
+	echo -e "Samples extracted from library pool."
+fi
+
+echo -e "\n========== Count reads in all obtained files ==========\n"
 for file in $project_dir/output_dir/R*.fastq; do 
 	echo "$file: `echo $(cat $file | wc -l)/4 | bc`"; 
 done > $project_dir/output_dir/Demultiplexed.counts
 
 cat $project_dir/output_dir/Demultiplexed.counts
-
-echo -e "\n========== Split files and .gz them ==========\n"
-
-python $project_dir/splitDemuxFastq.py $project_dir/output_dir/R1_demux_combined.fastq $project_dir/output_dir/ R1
-python $project_dir/splitDemuxFastq.py $project_dir/output_dir/R2_demux_combined.fastq $project_dir/output_dir/ R2
-
-sh $project_dir/readCount.sh $project_dir/output_dir/ R1
-sh $project_dir/readCount.sh $project_dir/output_dir/ R2
+echo -e "\n"
+cat $project_dir/output_dir/Sample_R1.counts
+echo -e "\n"
+cat $project_dir/output_dir/Sample_R2.counts
 
 echo -e "\n========== Sbatch log ==========\n"
 echo -e "\n Current directory: `pwd` \n"

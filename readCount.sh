@@ -9,37 +9,24 @@
 # Usage example
 #sh readCount.sh <input-dir-path> R1
 
-
-if test -f Sample.counts; then 
-	rm Sample.counts;
+if test -f Sample_R1.counts | test -f Sample_R2.counts ; then 
+	rm Sample_R1.counts; rm Sample_R2.counts;
 	echo -e "\noverwriting files!\n"
 fi
 
 input_dir=$1
 read=$2
-total_count=0
+total_counts=0
 
 # Loop through each FASTQ file
-for file in "$input_dir"/*_R1.fastq; do
+for file in "$input_dir"/*_"$read".fastq; do
 	line_count=$(wc -l < "$file")
 	sequence_count=$((line_count / 4))
 
 	echo "$file:" "$sequence_count" >> "$input_dir"/Sample_"$read".counts
 
 	# Generate the total counts
-	total_count=$((total_count + sequence_count))
+	total_counts=$((total_counts + sequence_count))
 done
 
-echo "Total:" "$total_count" >> "$input_dir"/Sample_"$read".counts
-
-for file in "$input_dir"/*_R2.fastq; do
-	line_count=$(wc -l < "$file")
-	sequence_count=$((line_count / 4))
-
-	echo "$file:" "$sequence_count" >> "$input_dir"/Sample_"$read".counts
-
-	# Generate the total counts
-	total_count=$((total_count + sequence_count))
-done
-
-echo "Total:" "$total_count" >> "$input_dir"/Sample_"$read".counts
+echo "Total:" "$total_counts" >> "$input_dir"/Sample_"$read".counts
