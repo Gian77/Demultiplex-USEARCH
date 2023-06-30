@@ -1,5 +1,12 @@
 # files NOT to be tracked
 
+results-demultiplex.log
+
+rawdata/mapping/
+rawdata/*.txt
+rawdata/barcodes*
 rawdata/*.fastq
+
 output_dir/
-slurm*
+
+slurm/

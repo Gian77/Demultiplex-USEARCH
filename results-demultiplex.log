@@ -1,204 +1,0 @@
-
- mkdir -p /mnt/home/benucci/Demultiplex-illumina/output_dir/ 
-
-
-========== Generating reverse complmeneted barcodes ==========
-
-
-========== Running USEARCH on barcodes ==========
-
-usearch v11.0.667_i86linux64, 1056Gb RAM, 128 cores
-(C) Copyright 2013-18 Robert C. Edgar, all rights reserved.
-https://drive5.com/usearch
-
-License: evanssa6@msu.edu, non-profit use, max 1 process(es)
-
-00:00 139Mb     0.1% Reading /mnt/home/benucci/Demultiplex-illumina/rawdata/barcodes_pna.fasta00:00 144Mb   100.0% Reading /mnt/home/benucci/Demultiplex-illumina/rawdata/barcodes_pna.fasta
-00:00 111Mb     0.1% Processing                                                               00:01 111Mb     0.7% Demuxed 0 / 123746 (0.0%)00:02 111Mb     1.6% Demuxed 0 / 285222 (0.0%)00:03 111Mb     2.5% Demuxed 0 / 443642 (0.0%)00:04 111Mb     3.3% Demuxed 0 / 605901 (0.0%)00:05 111Mb     4.2% Demuxed 0 / 766018 (0.0%)00:06 111Mb     5.1% Demuxed 0 / 927800 (0.0%)00:07 111Mb     5.9% Demuxed 0 / 1090261 (0.0%)00:08 111Mb     6.8% Demuxed 0 / 1252378 (0.0%)00:09 111Mb     7.7% Demuxed 0 / 1413692 (0.0%)00:10 111Mb     8.6% Demuxed 0 / 1576148 (0.0%)00:11 111Mb     9.4% Demuxed 0 / 1734522 (0.0%)00:12 111Mb    10.3% Demuxed 0 / 1896507 (0.0%)00:13 111Mb    11.2% Demuxed 0 / 2058753 (0.0%)00:14 111Mb    12.1% Demuxed 0 / 2220015 (0.0%)00:15 111Mb    12.9% Demuxed 0 / 2381972 (0.0%)00:16 111Mb    13.8% Demuxed 0 / 2544454 (0.0%)00:17 111Mb    14.7% Demuxed 0 / 2702912 (0.0%)00:18 111Mb    15.6% Demuxed 0 / 2865296 (0.0%)00:19 111Mb    16.4% Demuxed 0 / 3027444 (0.0%)00:20 111Mb    17.3% Demuxed 0 / 3189651 (0.0%)00:21 111Mb    18.2% Demuxed 1 / 3351485 (0.0%)00:22 111Mb    19.1% Demuxed 1 / 3513227 (0.0%)00:23 111Mb    19.9% Demuxed 1 / 3673074 (0.0%)00:24 111Mb    20.8% Demuxed 1 / 3835197 (0.0%)00:25 111Mb    21.7% Demuxed 1 / 3996474 (0.0%)00:26 111Mb    22.6% Demuxed 1 / 4158255 (0.0%)00:27 111Mb    23.4% Demuxed 1 / 4320130 (0.0%)00:28 111Mb    24.3% Demuxed 1 / 4482620 (0.0%)00:29 111Mb    25.2% Demuxed 1 / 4642571 (0.0%)00:30 111Mb    26.0% Demuxed 2 / 4803039 (0.0%)00:31 111Mb    26.9% Demuxed 2 / 4965476 (0.0%)00:32 111Mb    27.8% Demuxed 2 / 5127756 (0.0%)00:33 111Mb    28.7% Demuxed 2 / 5289396 (0.0%)00:34 111Mb    29.6% Demuxed 2 / 5451819 (0.0%)00:35 111Mb    30.4% Demuxed 3 / 5611164 (0.0%)00:36 111Mb    31.3% Demuxed 3 / 5773329 (0.0%)00:37 111Mb    32.2% Demuxed 3 / 5935572 (0.0%)00:38 111Mb    33.0% Demuxed 3 / 6096176 (0.0%)00:39 111Mb    33.9% Demuxed 3 / 6258014 (0.0%)00:40 111Mb    34.8% Demuxed 4 / 6420099 (0.0%)00:41 111Mb    35.7% Demuxed 4 / 6579764 (0.0%)00:42 111Mb    36.5% Demuxed 4 / 6741781 (0.0%)00:43 111Mb    37.4% Demuxed 4 / 6902608 (0.0%)00:44 111Mb    38.3% Demuxed 4 / 7064874 (0.0%)00:45 111Mb    39.2% Demuxed 4 / 7227012 (0.0%)00:46 111Mb    40.0% Demuxed 4 / 7388816 (0.0%)00:47 111Mb    40.9% Demuxed 4 / 7548489 (0.0%)00:48 111Mb    41.8% Demuxed 4 / 7710321 (0.0%)00:49 111Mb    42.7% Demuxed 4 / 7872813 (0.0%)00:50 111Mb    43.5% Demuxed 4 / 8035084 (0.0%)00:51 111Mb    44.4% Demuxed 4 / 8195645 (0.0%)00:52 111Mb    45.3% Demuxed 4 / 8357631 (0.0%)00:53 111Mb    46.1% Demuxed 4 / 8517449 (0.0%)00:54 111Mb    47.0% Demuxed 4 / 8679180 (0.0%)00:55 111Mb    47.9% Demuxed 4 / 8841534 (0.0%)00:56 111Mb    48.8% Demuxed 4 / 9001662 (0.0%)00:57 111Mb    49.6% Demuxed 4 / 9163847 (0.0%)00:58 111Mb    50.5% Demuxed 4 / 9325851 (0.0%)00:59 111Mb    51.4% Demuxed 4 / 9484952 (0.0%)01:00 111Mb    52.3% Demuxed 5 / 9646991 (0.0%)01:01 111Mb    53.1% Demuxed 6 / 9809485 (0.0%)01:02 111Mb    54.0% Demuxed 6 / 9970461 (0.0%)01:03 111Mb    54.9% Demuxed 6 / 10132801 (0.0%)01:04 111Mb    55.8% Demuxed 6 / 10293664 (0.0%)01:05 111Mb    56.6% Demuxed 6 / 10453630 (0.0%)01:06 111Mb    57.5% Demuxed 6 / 10615610 (0.0%)01:07 111Mb    58.4% Demuxed 6 / 10777696 (0.0%)01:08 111Mb    59.3% Demuxed 7 / 10939774 (0.0%)01:09 111Mb    60.1% Demuxed 8 / 11101718 (0.0%)01:10 111Mb    61.0% Demuxed 8 / 11262463 (0.0%)01:11 111Mb    61.9% Demuxed 8 / 11422001 (0.0%)01:12 111Mb    62.7% Demuxed 8 / 11583697 (0.0%)01:13 111Mb    63.6% Demuxed 8 / 11746095 (0.0%)01:14 111Mb    64.5% Demuxed 8 / 11907874 (0.0%)01:15 111Mb    65.4% Demuxed 8 / 12069302 (0.0%)01:16 111Mb    66.2% Demuxed 8 / 12231242 (0.0%)01:17 111Mb    67.1% Demuxed 8 / 12390735 (0.0%)01:18 111Mb    68.0% Demuxed 8 / 12551180 (0.0%)01:19 111Mb    68.9% Demuxed 8 / 12713719 (0.0%)01:20 111Mb    69.7% Demuxed 8 / 12874383 (0.0%)01:21 111Mb    70.6% Demuxed 8 / 13036857 (0.0%)01:22 111Mb    71.5% Demuxed 8 / 13198994 (0.0%)01:23 111Mb    72.3% Demuxed 8 / 13357178 (0.0%)01:24 111Mb    73.2% Demuxed 8 / 13519183 (0.0%)01:25 111Mb    74.1% Demuxed 8 / 13681504 (0.0%)01:26 111Mb    75.0% Demuxed 8 / 13841975 (0.0%)01:27 111Mb    75.8% Demuxed 9 / 14003856 (0.0%)01:28 111Mb    76.7% Demuxed 9 / 14165563 (0.0%)01:29 111Mb    77.6% Demuxed 9 / 14325291 (0.0%)01:30 111Mb    78.5% Demuxed 9 / 14487763 (0.0%)01:31 111Mb    79.3% Demuxed 9 / 14648620 (0.0%)01:32 111Mb    80.2% Demuxed 9 / 14810490 (0.0%)01:33 111Mb    81.1% Demuxed 9 / 14972395 (0.0%)01:34 111Mb    81.9% Demuxed 9 / 15133718 (0.0%)01:35 111Mb    82.8% Demuxed 9 / 15293465 (0.0%)01:36 111Mb    83.7% Demuxed 9 / 15454998 (0.0%)01:37 111Mb    84.6% Demuxed 9 / 15617225 (0.0%)01:38 111Mb    85.4% Demuxed 9 / 15779385 (0.0%)01:39 111Mb    86.3% Demuxed 9 / 15940072 (0.0%)01:40 111Mb    87.2% Demuxed 9 / 16102179 (0.0%)01:41 111Mb    88.1% Demuxed 9 / 16262187 (0.0%)01:42 111Mb    88.9% Demuxed 9 / 16424078 (0.0%)01:43 111Mb    89.8% Demuxed 9 / 16586514 (0.0%)01:44 111Mb    90.7% Demuxed 9 / 16746961 (0.0%)01:45 111Mb    91.6% Demuxed 9 / 16908810 (0.0%)01:46 111Mb    92.4% Demuxed 9 / 17071137 (0.0%)01:47 111Mb    93.3% Demuxed 9 / 17229953 (0.0%)01:48 111Mb    94.2% Demuxed 9 / 17392005 (0.0%)01:49 111Mb    95.0% Demuxed 9 / 17553872 (0.0%)01:50 111Mb    95.9% Demuxed 9 / 17716216 (0.0%)01:51 111Mb    96.8% Demuxed 9 / 17876587 (0.0%)01:52 111Mb    97.7% Demuxed 9 / 18036316 (0.0%)01:53 111Mb    98.5% Demuxed 9 / 18194725 (0.0%)01:54 111Mb    99.4% Demuxed 9 / 18354346 (0.0%)01:54 111Mb   100.0% Demuxed 9 / 18460333 (0.0%)
-
-========== Running USEARCH on RC barcodes ==========
-
-usearch v11.0.667_i86linux64, 1056Gb RAM, 128 cores
-(C) Copyright 2013-18 Robert C. Edgar, all rights reserved.
-https://drive5.com/usearch
-
-License: evanssa6@msu.edu, non-profit use, max 1 process(es)
-
-00:00 139Mb     0.1% Reading /mnt/home/benucci/Demultiplex-illumina/rawdata/barcodes_pna_rc.fasta00:00 144Mb   100.0% Reading /mnt/home/benucci/Demultiplex-illumina/rawdata/barcodes_pna_rc.fasta
-00:00 111Mb     0.1% Processing                                                                  00:01 111Mb     0.2% Demuxed 4161 / 33308 (12.5%)00:02 111Mb     0.9% Demuxed 19803 / 156395 (12.7%)00:03 111Mb     1.7% Demuxed 37882 / 300036 (12.6%)00:04 111Mb     2.4% Demuxed 54916 / 435037 (12.6%)00:05 111Mb     3.2% Demuxed 72058 / 573142 (12.6%)00:06 111Mb     3.9% Demuxed 89287 / 710191 (12.6%)00:07 111Mb     4.6% Demuxed 106542 / 848906 (12.6%)00:08 111Mb     5.4% Demuxed 122995 / 981333 (12.5%)00:09 111Mb     6.1% Demuxed 140154 / 1121461 (12.5%)00:10 111Mb     6.9% Demuxed 157809 / 1262680 (12.5%)00:11 111Mb     7.6% Demuxed 174776 / 1397562 (12.5%)00:12 111Mb     8.4% Demuxed 191871 / 1537279 (12.5%)00:13 111Mb     9.1% Demuxed 208751 / 1673232 (12.5%)00:14 111Mb     9.8% Demuxed 225500 / 1808656 (12.5%)00:15 111Mb    10.6% Demuxed 242983 / 1950981 (12.5%)00:16 111Mb    11.4% Demuxed 260245 / 2090542 (12.4%)00:17 111Mb    12.1% Demuxed 277802 / 2228821 (12.5%)00:18 111Mb    12.8% Demuxed 294634 / 2362447 (12.5%)00:19 111Mb    13.6% Demuxed 311557 / 2501687 (12.5%)00:20 111Mb    14.3% Demuxed 328758 / 2639398 (12.5%)00:21 111Mb    15.1% Demuxed 346239 / 2779475 (12.5%)00:22 111Mb    15.8% Demuxed 362685 / 2913410 (12.4%)00:23 111Mb    16.5% Demuxed 378770 / 3042886 (12.4%)00:24 111Mb    17.3% Demuxed 396073 / 3180198 (12.5%)00:25 111Mb    18.0% Demuxed 413406 / 3318603 (12.5%)00:26 111Mb    18.8% Demuxed 430578 / 3459326 (12.4%)00:27 111Mb    19.5% Demuxed 447853 / 3597642 (12.4%)00:28 111Mb    20.2% Demuxed 464145 / 3729773 (12.4%)00:29 111Mb    21.0% Demuxed 481479 / 3870497 (12.4%)00:30 111Mb    21.7% Demuxed 498779 / 4009864 (12.4%)00:31 111Mb    22.5% Demuxed 516410 / 4149584 (12.4%)00:32 111Mb    23.2% Demuxed 533178 / 4286092 (12.4%)00:33 111Mb    24.0% Demuxed 549517 / 4420761 (12.4%)00:34 111Mb    24.7% Demuxed 566514 / 4556838 (12.4%)00:35 111Mb    25.5% Demuxed 583590 / 4695374 (12.4%)00:36 111Mb    26.2% Demuxed 600659 / 4835506 (12.4%)00:37 111Mb    26.9% Demuxed 617509 / 4969820 (12.4%)00:38 111Mb    27.7% Demuxed 634213 / 5103175 (12.4%)00:39 111Mb    28.4% Demuxed 651061 / 5237786 (12.4%)00:40 111Mb    29.1% Demuxed 667940 / 5375614 (12.4%)00:41 111Mb    29.9% Demuxed 685019 / 5513039 (12.4%)00:42 111Mb    30.6% Demuxed 702280 / 5651006 (12.4%)00:43 111Mb    31.3% Demuxed 718461 / 5781480 (12.4%)00:44 111Mb    32.0% Demuxed 734669 / 5913264 (12.4%)00:45 111Mb    32.8% Demuxed 751656 / 6048648 (12.4%)00:46 111Mb    33.5% Demuxed 768496 / 6184811 (12.4%)00:47 111Mb    34.3% Demuxed 785325 / 6322643 (12.4%)00:48 111Mb    35.0% Demuxed 802643 / 6462418 (12.4%)00:49 111Mb    35.8% Demuxed 819715 / 6599606 (12.4%)00:50 111Mb    36.5% Demuxed 836982 / 6738379 (12.4%)00:51 111Mb    37.3% Demuxed 854243 / 6877970 (12.4%)00:52 111Mb    38.0% Demuxed 871031 / 7013491 (12.4%)00:53 111Mb    38.7% Demuxed 887657 / 7147412 (12.4%)00:54 111Mb    39.4% Demuxed 903839 / 7278811 (12.4%)00:55 111Mb    40.2% Demuxed 920527 / 7410431 (12.4%)00:56 111Mb    40.9% Demuxed 937134 / 7543249 (12.4%)00:57 111Mb    41.6% Demuxed 954055 / 7679381 (12.4%)00:58 111Mb    42.3% Demuxed 970970 / 7814876 (12.4%)00:59 111Mb    43.0% Demuxed 986785 / 7942083 (12.4%)01:00 111Mb    43.7% Demuxed 1003055 / 8073503 (12.4%)01:01 111Mb    44.5% Demuxed 1019378 / 8206543 (12.4%)01:02 111Mb    45.2% Demuxed 1036633 / 8346851 (12.4%)01:03 111Mb    46.0% Demuxed 1053547 / 8483480 (12.4%)01:04 111Mb    46.6% Demuxed 1069335 / 8610677 (12.4%)01:05 111Mb    47.4% Demuxed 1085798 / 8746009 (12.4%)01:06 111Mb    48.1% Demuxed 1102842 / 8882178 (12.4%)01:07 111Mb    48.9% Demuxed 1120171 / 9020513 (12.4%)01:08 111Mb    49.6% Demuxed 1137753 / 9160613 (12.4%)01:09 111Mb    50.3% Demuxed 1154330 / 9292043 (12.4%)01:10 111Mb    51.1% Demuxed 1171633 / 9428827 (12.4%)01:11 111Mb    51.8% Demuxed 1189073 / 9567256 (12.4%)01:12 111Mb    52.5% Demuxed 1205682 / 9701083 (12.4%)01:13 111Mb    53.3% Demuxed 1222499 / 9835995 (12.4%)01:14 111Mb    54.0% Demuxed 1238674 / 9964614 (12.4%)01:15 111Mb    54.7% Demuxed 1255605 / 10101018 (12.4%)01:16 111Mb    55.5% Demuxed 1272689 / 10240039 (12.4%)01:17 111Mb    56.2% Demuxed 1289378 / 10372744 (12.4%)01:18 111Mb    56.9% Demuxed 1305896 / 10505496 (12.4%)01:19 111Mb    57.6% Demuxed 1321909 / 10636715 (12.4%)01:20 111Mb    58.4% Demuxed 1339661 / 10777517 (12.4%)01:21 111Mb    59.1% Demuxed 1356467 / 10911141 (12.4%)01:22 111Mb    59.8% Demuxed 1373349 / 11045625 (12.4%)01:23 111Mb    60.5% Demuxed 1389796 / 11179023 (12.4%)01:24 111Mb    61.3% Demuxed 1406755 / 11312881 (12.4%)01:25 111Mb    62.0% Demuxed 1423007 / 11442843 (12.4%)01:26 111Mb    62.7% Demuxed 1439213 / 11572200 (12.4%)01:27 111Mb    63.4% Demuxed 1455293 / 11704005 (12.4%)01:28 111Mb    64.1% Demuxed 1471311 / 11831776 (12.4%)01:29 111Mb    64.8% Demuxed 1487856 / 11962041 (12.4%)01:30 111Mb    65.5% Demuxed 1503566 / 12089582 (12.4%)01:31 111Mb    66.2% Demuxed 1519903 / 12220347 (12.4%)01:32 111Mb    66.9% Demuxed 1535750 / 12344966 (12.4%)01:33 111Mb    67.5% Demuxed 1551560 / 12472417 (12.4%)01:34 111Mb    68.3% Demuxed 1568990 / 12614154 (12.4%)01:35 111Mb    69.0% Demuxed 1585973 / 12749379 (12.4%)01:36 111Mb    69.8% Demuxed 1602773 / 12882101 (12.4%)01:37 111Mb    70.5% Demuxed 1619472 / 13014730 (12.4%)01:38 111Mb    71.2% Demuxed 1635607 / 13146634 (12.4%)01:39 111Mb    71.9% Demuxed 1652537 / 13281079 (12.4%)01:40 111Mb    72.7% Demuxed 1669763 / 13418760 (12.4%)01:41 111Mb    73.4% Demuxed 1687350 / 13559545 (12.4%)01:42 111Mb    74.2% Demuxed 1704881 / 13699999 (12.4%)01:43 111Mb    74.9% Demuxed 1721575 / 13833893 (12.4%)01:44 111Mb    75.7% Demuxed 1739016 / 13974878 (12.4%)01:45 111Mb    76.4% Demuxed 1756483 / 14116806 (12.4%)01:46 111Mb    77.2% Demuxed 1774121 / 14258141 (12.4%)01:47 111Mb    78.0% Demuxed 1791835 / 14399220 (12.4%)01:48 111Mb    78.7% Demuxed 1808097 / 14532079 (12.4%)01:49 111Mb    79.5% Demuxed 1825594 / 14672538 (12.4%)01:50 111Mb    80.2% Demuxed 1843158 / 14809958 (12.4%)01:51 111Mb    80.9% Demuxed 1860045 / 14947044 (12.4%)01:52 111Mb    81.7% Demuxed 1876925 / 15085104 (12.4%)01:53 111Mb    82.4% Demuxed 1893982 / 15221490 (12.4%)01:54 111Mb    83.2% Demuxed 1911085 / 15358077 (12.4%)01:55 111Mb    83.9% Demuxed 1927924 / 15494401 (12.4%)01:56 111Mb    84.7% Demuxed 1945153 / 15633955 (12.4%)01:57 111Mb    85.4% Demuxed 1962277 / 15770720 (12.4%)01:58 111Mb    86.1% Demuxed 1978732 / 15902580 (12.4%)01:59 111Mb    86.9% Demuxed 1995925 / 16043137 (12.4%)02:00 111Mb    87.6% Demuxed 2013200 / 16181823 (12.4%)02:01 111Mb    88.4% Demuxed 2030577 / 16321114 (12.4%)02:02 111Mb    89.1% Demuxed 2048149 / 16463232 (12.4%)02:03 111Mb    89.9% Demuxed 2065201 / 16600635 (12.4%)02:04 111Mb    90.6% Demuxed 2083001 / 16741069 (12.4%)02:05 111Mb    91.4% Demuxed 2100390 / 16879577 (12.4%)02:06 111Mb    92.2% Demuxed 2117810 / 17020104 (12.4%)02:07 111Mb    92.9% Demuxed 2135298 / 17158355 (12.4%)02:08 111Mb    93.6% Demuxed 2152442 / 17293336 (12.4%)02:09 111Mb    94.4% Demuxed 2170077 / 17434524 (12.4%)02:10 111Mb    95.1% Demuxed 2186921 / 17571962 (12.4%)02:11 111Mb    95.9% Demuxed 2204217 / 17709288 (12.4%)02:12 111Mb    96.6% Demuxed 2221727 / 17849570 (12.4%)02:13 111Mb    97.4% Demuxed 2237894 / 17982246 (12.4%)02:14 111Mb    98.1% Demuxed 2255077 / 18120916 (12.4%)02:15 111Mb    98.9% Demuxed 2272167 / 18257571 (12.4%)02:16 111Mb    99.6% Demuxed 2289750 / 18397084 (12.4%)02:16 111Mb   100.0% Demuxed 2297343 / 18460333 (12.4%)
-
-========== Running python script and cat ==========
-
-Reversed complement and quality of /mnt/home/benucci/Demultiplex-illumina/output_dir/R1_demux.fastq written to /mnt/home/benucci/Demultiplex-illumina/output_dir/R1_demux_revcomp.fastq
-Reversed complement and quality of /mnt/home/benucci/Demultiplex-illumina/output_dir/R2_demux.fastq written to /mnt/home/benucci/Demultiplex-illumina/output_dir/R2_demux_revcomp.fastq
-
-========== Split into single sample files ==========
-
-
-========== Count reads in all obtained files ==========
-
-/mnt/home/benucci/Demultiplex-illumina/output_dir/R1_demux_combined.fastq: 2297352
-/mnt/home/benucci/Demultiplex-illumina/output_dir/R1_demux.fastq: 9
-/mnt/home/benucci/Demultiplex-illumina/output_dir/R1_demux_RC.fastq: 2297343
-/mnt/home/benucci/Demultiplex-illumina/output_dir/R1_demux_revcomp.fastq: 9
-/mnt/home/benucci/Demultiplex-illumina/output_dir/R2_demux_combined.fastq: 2297352
-/mnt/home/benucci/Demultiplex-illumina/output_dir/R2_demux.fastq: 9
-/mnt/home/benucci/Demultiplex-illumina/output_dir/R2_demux_RC.fastq: 2297343
-/mnt/home/benucci/Demultiplex-illumina/output_dir/R2_demux_revcomp.fastq: 9
-
-
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample001_R1.fastq: 38919
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample002_R1.fastq: 36733
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample003_R1.fastq: 1336
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample004_R1.fastq: 134856
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample005_R1.fastq: 97987
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample006_R1.fastq: 129571
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample007_R1.fastq: 2033
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample008_R1.fastq: 1566
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample009_R1.fastq: 18830
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample010_R1.fastq: 8167
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample011_R1.fastq: 12207
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample012_R1.fastq: 16879
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample013_R1.fastq: 10027
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample014_R1.fastq: 28308
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample015_R1.fastq: 487
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample016_R1.fastq: 39179
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample017_R1.fastq: 46867
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample018_R1.fastq: 2437
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample019_R1.fastq: 1585
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample020_R1.fastq: 60398
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample021_R1.fastq: 57601
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample022_R1.fastq: 49383
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample023_R1.fastq: 75762
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample024_R1.fastq: 59259
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample025_R1.fastq: 3590
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample026_R1.fastq: 12866
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample027_R1.fastq: 3126
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample028_R1.fastq: 17978
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample029_R1.fastq: 4338
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample030_R1.fastq: 35536
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample031_R1.fastq: 34254
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample032_R1.fastq: 36986
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample033_R1.fastq: 155081
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample034_R1.fastq: 136881
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample035_R1.fastq: 52829
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample036_R1.fastq: 305
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample037_R1.fastq: 62628
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample038_R1.fastq: 24316
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample039_R1.fastq: 45398
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample040_R1.fastq: 72313
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample041_R1.fastq: 56747
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample042_R1.fastq: 901
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample043_R1.fastq: 69350
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample044_R1.fastq: 72731
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample045_R1.fastq: 57737
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample046_R1.fastq: 40677
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample047_R1.fastq: 45709
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample048_R1.fastq: 97979
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample049_R1.fastq: 38364
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample050_R1.fastq: 34372
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample051_R1.fastq: 35158
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample052_R1.fastq: 46799
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample053_R1.fastq: 37844
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample054_R1.fastq: 34182
-Total: 2297352
-
-
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample001_R2.fastq: 38919
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample002_R2.fastq: 36733
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample003_R2.fastq: 1336
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample004_R2.fastq: 134856
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample005_R2.fastq: 97987
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample006_R2.fastq: 129571
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample007_R2.fastq: 2033
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample008_R2.fastq: 1566
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample009_R2.fastq: 18830
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample010_R2.fastq: 8167
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample011_R2.fastq: 12207
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample012_R2.fastq: 16879
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample013_R2.fastq: 10027
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample014_R2.fastq: 28308
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample015_R2.fastq: 487
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample016_R2.fastq: 39179
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample017_R2.fastq: 46867
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample018_R2.fastq: 2437
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample019_R2.fastq: 1585
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample020_R2.fastq: 60398
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample021_R2.fastq: 57601
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample022_R2.fastq: 49383
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample023_R2.fastq: 75762
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample024_R2.fastq: 59259
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample025_R2.fastq: 3590
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample026_R2.fastq: 12866
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample027_R2.fastq: 3126
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample028_R2.fastq: 17978
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample029_R2.fastq: 4338
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample030_R2.fastq: 35536
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample031_R2.fastq: 34254
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample032_R2.fastq: 36986
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample033_R2.fastq: 155081
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample034_R2.fastq: 136881
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample035_R2.fastq: 52829
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample036_R2.fastq: 305
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample037_R2.fastq: 62628
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample038_R2.fastq: 24316
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample039_R2.fastq: 45398
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample040_R2.fastq: 72313
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample041_R2.fastq: 56747
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample042_R2.fastq: 901
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample043_R2.fastq: 69350
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample044_R2.fastq: 72731
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample045_R2.fastq: 57737
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample046_R2.fastq: 40677
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample047_R2.fastq: 45709
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample048_R2.fastq: 97979
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample049_R2.fastq: 38364
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample050_R2.fastq: 34372
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample051_R2.fastq: 35158
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample052_R2.fastq: 46799
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample053_R2.fastq: 37844
-/mnt/home/benucci/Demultiplex-illumina/output_dir/sample054_R2.fastq: 34182
-Total: 2297352
-
-========== Sbatch log ==========
-
-
- Current directory: /mnt/ufs18/home-150/benucci/Demultiplex-illumina 
-
-
- JobID           JobName               Start                 End    Elapsed      NCPUS     ReqMem 
------------- ---------- ------------------- ------------------- ---------- ---------- ---------- 
-17684613     demultipl+ 2023-06-27T15:59:02             Unknown   00:10:00          8        64G 
-17684613.ba+      batch 2023-06-27T15:59:02             Unknown   00:10:00          8            
-17684613.ex+     extern 2023-06-27T15:59:02             Unknown   00:10:00          8             
-
-JobId=17684613 JobName=demultiplex
-   UserId=benucci(833945) GroupId=ShadeLab(2275) MCS_label=N/A
-   Priority=59588 Nice=0 Account=glbrc QOS=normal
-   JobState=RUNNING Reason=None Dependency=(null)
-   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
-   RunTime=00:10:04 TimeLimit=03:59:00 TimeMin=N/A
-   SubmitTime=2023-06-27T15:58:59 EligibleTime=2023-06-27T15:58:59
-   AccrueTime=2023-06-27T15:58:59
-   StartTime=2023-06-27T15:59:02 EndTime=2023-06-27T19:58:02 Deadline=N/A
-   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-06-27T15:59:02 Scheduler=Main
-   Partition=glbrc AllocNode:Sid=dev-intel18:31617
-   ReqNodeList=(null) ExcNodeList=(null)
-   NodeList=acm-057
-   BatchHost=acm-057
-   NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
-   ReqTRES=cpu=8,mem=64G,node=1,billing=9961
-   AllocTRES=cpu=8,mem=64G,node=1,billing=9961
-   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
-   MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0
-   Features=[intel14|intel16|intel18|(amr|acm)|nvf|nal|nif] DelayBoot=00:00:00
-   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
-   Command=/mnt/ufs18/home-150/benucci/Demultiplex-illumina/demultiplex.sb
-   WorkDir=/mnt/ufs18/home-150/benucci/Demultiplex-illumina
-   Comment=stdout=/mnt/ufs18/home-150/benucci/Demultiplex-illumina/results-demultiplex.log 
-   StdErr=/mnt/ufs18/home-150/benucci/Demultiplex-illumina/results-demultiplex.log
-   StdIn=/dev/null
-   StdOut=/mnt/ufs18/home-150/benucci/Demultiplex-illumina/results-demultiplex.log
-   Power=
-   
-
