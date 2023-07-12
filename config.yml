@@ -11,4 +11,4 @@ R2="//mnt/home/benucci/Demultiplex-illumina/rawdata/*R2_001.fastq"
 I1="/mnt/home/benucci/Demultiplex-illumina/rawdata/*I1_001.fastq"
 
 # bacrodes in a .fasta format
-index="/mnt/home/benucci/Demultiplex-illumina/rawdata/barcodes_maturity.fasta"
+index="/mnt/home/benucci/Demultiplex-illumina/rawdata/barcodes_pna.fasta"
