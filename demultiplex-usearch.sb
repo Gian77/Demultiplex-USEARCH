@@ -7,7 +7,7 @@
 #SBATCH --mem=64G
 #SBATCH --job-name demultiplex
 #SBATCH -A glbrc
-#SBATCH --output=results-demultiplex.log
+#SBATCH --output=results-demultiplex-usearch.log
 
 cd ${SLURM_SUBMIT_DIR}
 cores=$SLURM_CPUS_PER_TASK

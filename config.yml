@@ -3,12 +3,12 @@
 # NOTE!!! Modify all the PATHs below accordingly. 
 
 # Main file paths
-project_dir="/mnt/home/benucci/Demultiplex-illumina"
+project_dir="/mnt/home/benucci/Demultiplex-USEARCH"
 
 # Raw fast files
-R1="/mnt/home/benucci/Demultiplex-illumina/rawdata/*R1_001.fastq"
-R2="//mnt/home/benucci/Demultiplex-illumina/rawdata/*R2_001.fastq"
-I1="/mnt/home/benucci/Demultiplex-illumina/rawdata/*I1_001.fastq"
+R1="/mnt/home/benucci/Demultiplex-USEARCH/rawdata/*R1_001.fastq"
+R2="//mnt/home/benucci/Demultiplex-USEARCH/rawdata/*R2_001.fastq"
+I1="/mnt/home/benucci/Demultiplex-USEARCH/rawdata/*I1_001.fastq"
 
 # bacrodes in a .fasta format
-index="/mnt/home/benucci/Demultiplex-illumina/rawdata/barcodes_pna.fasta"
+index="/mnt/home/benucci/Demultiplex-USEARCH/rawdata/barcodes_biochar.fasta"
