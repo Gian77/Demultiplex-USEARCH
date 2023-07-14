@@ -1,6 +1,8 @@
 # files NOT to be tracked
 
-results-demultiplex.log
+results-demultiplex-usearch.log
+
+debug/
 
 rawdata/mapping/
 rawdata/*.txt
