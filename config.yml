@@ -3,12 +3,12 @@
 # NOTE!!! Modify all the PATHs below accordingly. 
 
 # Main file paths
-project_dir="/mnt/home/benucci/Demultiplex-USEARCH"
+project_dir="/mnt/home/benucci/Demultiplex-USEARCH/"
 
-# Raw fast files
-R1="/mnt/home/benucci/Demultiplex-USEARCH/rawdata/*R1_001.fastq"
-R2="//mnt/home/benucci/Demultiplex-USEARCH/rawdata/*R2_001.fastq"
-I1="/mnt/home/benucci/Demultiplex-USEARCH/rawdata/*I1_001.fastq"
+# Raw fast files. Remember that USEARCH does NOT support compressed files e.g. fastq.gz
+R1="/mnt/research/bonito_lab/Benucci/miseq_ITS_Australia_Fiji_LSU/AustraliaFiji_ITSandLSU_NoIndex_L001_R1_001.fastq"
+R2="/mnt/research/bonito_lab/Benucci/miseq_ITS_Australia_Fiji_LSU/AustraliaFiji_ITSandLSU_NoIndex_L001_R3_001.fastq"
+I1="/mnt/research/bonito_lab/Benucci/miseq_ITS_Australia_Fiji_LSU/AustraliaFiji_ITSandLSU_NoIndex_L001_R2_001.fastq"
 
 # bacrodes in a .fasta format
-index="/mnt/home/benucci/Demultiplex-USEARCH/rawdata/barcodes_16s_preserv_maturity.fasta"
+index="/mnt/home/benucci/Demultiplex-USEARCH/aus_ITS_barcodes.fasta"

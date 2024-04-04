@@ -1,9 +1,9 @@
 #!/bin/bash -login
 
-#SBATCH --time=03:59:00
+#SBATCH --time=20:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=2
 #SBATCH --mem=64G
 #SBATCH --job-name demultiplex
 #SBATCH -A glbrc
