@@ -34,6 +34,7 @@ echo -e "\n========== Running USEARCH on barcodes ==========\n"
 	-fastx_demux $R1\
 	-reverse $R2 \
 	-index $I1 \
+	-trunclabels \
 	-barcodes $index \
 	-fastqout $project_dir/output_dir/R1_demux.fastq \
 	-output2 $project_dir/output_dir/R2_demux.fastq
@@ -43,6 +44,7 @@ echo -e "\n========== Running USEARCH on RC barcodes ==========\n"
 	-fastx_demux $R1\
 	-reverse $R2 \
 	-index $I1 \
+	-trunclabels \
 	-barcodes ${index_RC}_rc.fasta \
 	-fastqout $project_dir/output_dir/R1_demux_RC.fastq \
 	-output2 $project_dir/output_dir/R2_demux_RC.fastq
