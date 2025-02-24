@@ -22,3 +22,17 @@ __NOTE__
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 ```
+
+The barcode file should be structured for USEARCH, as showed below, and saved it as a `.fasta`. The name of sample should be as simple as possible for convenience. 
+
+```
+>bc1
+TACGACTCTG
+>bc2
+TTCTTAACGC
+>bc3
+ACCCAGTATG
+>bc4
+AACGGCTGGA
+...
+```

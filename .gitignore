@@ -4,6 +4,8 @@ results-demultiplex-usearch.log
 
 debug/
 
+datasets/
+
 rawdata/mapping/
 rawdata/*.txt
 rawdata/barcodes*

@@ -1,9 +1,9 @@
 #!/bin/bash -login
 
-#SBATCH --time=20:00:00
+#SBATCH --time=24:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=2
+#SBATCH --cpus-per-task=4
 #SBATCH --mem=64G
 #SBATCH --job-name demultiplex
 #SBATCH -A glbrc
@@ -19,7 +19,11 @@ echo -e "\n mkdir -p $project_dir/output_dir/ \n"; mkdir -p $project_dir/output_
 
 echo -e "\n========== Generating reverse complmeneted barcodes ==========\n"
 
+conda activate python3.9
+
 python $project_dir/barcodeRC.py $index
+
+conda deactivate
 
 index_RC=$(echo $index | cut -d"." -f1)
 
@@ -59,11 +63,15 @@ cat $project_dir/output_dir/R2_demux.fastq \
 
 echo -e "\n========== Split into single sample files ==========\n"
 
+conda activate python3.9
+
 python $project_dir/splitDemuxFastq.py $project_dir/output_dir/R1_demux_combined.fastq $project_dir/output_dir R1
 python $project_dir/splitDemuxFastq.py $project_dir/output_dir/R2_demux_combined.fastq $project_dir/output_dir R2
 
-sh $project_dir/readCount.sh $project_dir/output_dir R1
-sh $project_dir/readCount.sh $project_dir/output_dir R2
+conda deactivate
+
+bash $project_dir/readCount.sh $project_dir/output_dir R1
+bash $project_dir/readCount.sh $project_dir/output_dir R2
 
 if test -f $project_dir/output_dir/Sample*.fasta; then
 	echo -e "Samples extracted from library pool."
@@ -79,6 +87,19 @@ echo -e "\n"
 cat $project_dir/output_dir/Sample_R1.counts
 echo -e "\n"
 cat $project_dir/output_dir/Sample_R2.counts
+
+echo -e "\n========== gzip the files? $gzipped ==========\n"
+
+if [[ "$gzipped" == "yes" ]]; then
+
+	for i in $project_dir/output_dir/*.fastq; do 
+		echo "$i"; 
+		gzip "$i"; 
+	done
+else
+	echo -e "\n You decided NOT gzipping the files.\n" 
+fi
+
 
 echo -e "\n========== Sbatch log ==========\n"
 echo -e "\n Current directory: `pwd` \n"
