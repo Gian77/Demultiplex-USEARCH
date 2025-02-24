@@ -1,6 +1,6 @@
 # Demultiplexing pipeline for Illumina data
 
-This pipeline is based on [USEARCH](https://www.drive5.com/usearch/) that is a propetary software. Please, read the software policy before using it. 
+This pipeline is based on [USEARCH](https://github.com/rcedgar/usearch12) that is a propetary software. Please, read the software policy before using it. 
 
 This short pipeline is supposed to run on HPCC mounting the SLURM system.
 
