@@ -23,7 +23,7 @@ __NOTE__
 #SBATCH --mem=32G
 ```
 
-The barcode file should be structured for USEARCH, as showed below, and saved it as a `.fasta`. The name of sample should be as simple as possible for convenience. 
+The barcode file should be structured for [USEARCH](https://github.com/rcedgar/usearch12), as showed below, and saved it as a `.fasta`. The name of sample should be as simple as possible for convenience. 
 
 ```
 >bc1
@@ -36,3 +36,5 @@ ACCCAGTATG
 AACGGCTGGA
 ...
 ```
+
+Make sure you change the USEARCH executable in the `demultiplex-usearch.sb` script before running or add the full path to the `config.yml` file.
