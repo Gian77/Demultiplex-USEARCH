@@ -13,13 +13,20 @@ cd ${SLURM_SUBMIT_DIR}
 cores=$SLURM_CPUS_PER_TASK
 RAM=$SLURM_MEM_PER_NODE
 
+# source the config file
 source ./config.yml
+
+# activate miniforge for the HPCC at MSU. This may be different in a different computer cluster.
+module purge
+module load Miniforge3
 
 echo -e "\n mkdir -p $project_dir/output_dir/ \n"; mkdir -p $project_dir/output_dir/
 
 echo -e "\n========== Generating reverse complmeneted barcodes ==========\n"
 
+# load the conda environment
 conda activate python3.9
+conda env list
 
 python $project_dir/barcodeRC.py $index
 
@@ -34,7 +41,7 @@ fi
 
 echo -e "\n========== Running USEARCH on barcodes ==========\n"
 
-/mnt/research/rdp/public/thirdParty/usearch11.0.667_i86linux64 \
+/mnt/research/glbrc_group/benuccigmn/TOOLS/usearch11.0.667_i86linux64 \
 	-fastx_demux $R1\
 	-reverse $R2 \
 	-index $I1 \
@@ -44,7 +51,7 @@ echo -e "\n========== Running USEARCH on barcodes ==========\n"
 	-output2 $project_dir/output_dir/R2_demux.fastq
 
 echo -e "\n========== Running USEARCH on RC barcodes ==========\n"
-/mnt/research/rdp/public/thirdParty/usearch11.0.667_i86linux64 \
+/mnt/research/glbrc_group/benuccigmn/TOOLS/usearch11.0.667_i86linux64 \
 	-fastx_demux $R1\
 	-reverse $R2 \
 	-index $I1 \

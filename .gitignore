@@ -1,16 +1,11 @@
 # files NOT to be tracked
 
 results-demultiplex-usearch.log
-
 debug/
-
 datasets/
-
 rawdata/mapping/
 rawdata/*.txt
 rawdata/barcodes*
 rawdata/*.fastq
-
 output_dir/
-
 slurm/

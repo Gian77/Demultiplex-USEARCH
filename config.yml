@@ -6,12 +6,13 @@
 project_dir="/mnt/home/benucci/Demultiplex-USEARCH"
 
 # Raw fast files. Remember that USEARCH does NOT support compressed files e.g. fastq.gz
-R1="/mnt/research/bonito_lab/Benucci/miseq_DeepCore_GLBRC/raw_Deep_Core_16S_GLBR/Deep_Core_16S_GLBR_S1_L001_R1_001.fastq"
-R2="/mnt/research/bonito_lab/Benucci/miseq_DeepCore_GLBRC/raw_Deep_Core_16S_GLBR/Deep_Core_16S_GLBR_S1_L001_R2_001.fastq"
-I1="/mnt/research/bonito_lab/Benucci/miseq_DeepCore_GLBRC/raw_Deep_Core_16S_GLBR/Deep_Core_16S_GLBR_S1_L001_I1_001.fastq"
+R1="/mnt/research/bonito_lab/Benucci/miseq_ITS_Australia_Fiji_LSU/AustraliaFiji_ITSandLSU_NoIndex_L001_R1_001.fastq"
+R2="/mnt/research/bonito_lab/Benucci/miseq_ITS_Australia_Fiji_LSU/AustraliaFiji_ITSandLSU_NoIndex_L001_R2_001.fastq"
+I1="/mnt/research/bonito_lab/Benucci/miseq_ITS_Australia_Fiji_LSU/AustraliaFiji_ITSandLSU_NoIndex_L001_R3_001.fastq"
 
 # bacrodes in a .fasta format
-index="/mnt/home/benucci/Demultiplex-USEARCH/datasets/deepcore_barcodes_16s.fasta"
+index="/mnt/home/benucci/Demultiplex-USEARCH/barcodes/index_16S_AU.fasta"
 
-# gzipped fastq file? if so add "yes"
-gzipped=no
+# gzip output fastq file? if so add "yes"
+gzipped=yes
+
