@@ -1,9 +1,9 @@
 #!/bin/bash -login
 
-#SBATCH --time=24:00:00
+#SBATCH --time=12:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
 #SBATCH --job-name demultiplex
 #SBATCH -A glbrc
@@ -19,24 +19,28 @@ source ./config.yml
 # activate miniforge for the HPCC at MSU. This may be different in a different computer cluster.
 module purge
 module load Miniforge3
+which conda
+echo -e "\n"
 
 echo -e "\n mkdir -p $project_dir/output_dir/ \n"; mkdir -p $project_dir/output_dir/
 
 echo -e "\n========== Generating reverse complmeneted barcodes ==========\n"
 
 # load the conda environment
-conda activate python3.9
+conda activate python3
 conda env list
+echo -e "\n"
 
-python $project_dir/barcodeRC.py $index
+# reverse complement the barcodes
+python $project_dir/scripts/barcodeRC.py $index
 
 conda deactivate
 
 index_RC=$(echo $index | cut -d"." -f1)
 
-if test -f $project_dir/rawdata/${index_RC}_rc.fasta; then
+if test -f $project_dir/barcodes/${index_RC}_rc.fasta; then
 	echo -e "Reverse complemented file generated.\nFirst 5 barcodes as follows:"
-	head $project_dir/rawdata/${index_RC}_rc.fasta
+	head $project_dir/barcodes/${index_RC}_rc.fasta
 fi
 
 echo -e "\n========== Running USEARCH on barcodes ==========\n"
@@ -70,15 +74,16 @@ cat $project_dir/output_dir/R2_demux.fastq \
 
 echo -e "\n========== Split into single sample files ==========\n"
 
-conda activate python3.9
+conda activate python3
 
-python $project_dir/splitDemuxFastq.py $project_dir/output_dir/R1_demux_combined.fastq $project_dir/output_dir R1
-python $project_dir/splitDemuxFastq.py $project_dir/output_dir/R2_demux_combined.fastq $project_dir/output_dir R2
+# aplit the fastq file in single samples
+python $project_dir/scripts/splitDemuxFastq.py $project_dir/output_dir/R1_demux_combined.fastq $project_dir/output_dir R1
+python $project_dir/scripts/splitDemuxFastq.py $project_dir/output_dir/R2_demux_combined.fastq $project_dir/output_dir R2
 
 conda deactivate
 
-bash $project_dir/readCount.sh $project_dir/output_dir R1
-bash $project_dir/readCount.sh $project_dir/output_dir R2
+bash $project_dir/scripts/readCount.sh $project_dir/output_dir R1
+bash $project_dir/scripts/readCount.sh $project_dir/output_dir R2
 
 if test -f $project_dir/output_dir/Sample*.fasta; then
 	echo -e "Samples extracted from library pool."
