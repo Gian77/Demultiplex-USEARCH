@@ -5,3 +5,4 @@ results-demultiplex-usearch.log
 debug/
 output_dir/
 barcodes/*.fasta
+barcodes/all_index.fasta
