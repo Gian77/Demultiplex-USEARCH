@@ -1,6 +1,6 @@
 #!/bin/bash -login
 
-#SBATCH --time=12:00:00
+#SBATCH --time=10:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
@@ -32,7 +32,7 @@ conda env list
 echo -e "\n"
 
 # reverse complement the barcodes
-python $project_dir/scripts/barcodeRC.py $index
+echo -e "reverse complement the barcodes! \n"; python $project_dir/scripts/barcodeRC.py $index
 
 conda deactivate
 
@@ -45,7 +45,7 @@ fi
 
 echo -e "\n========== Running USEARCH on barcodes ==========\n"
 
-/mnt/research/glbrc_group/benuccigmn/TOOLS/usearch11.0.667_i86linux64 \
+$usearch11 \
 	-fastx_demux $R1\
 	-reverse $R2 \
 	-index $I1 \
@@ -55,7 +55,7 @@ echo -e "\n========== Running USEARCH on barcodes ==========\n"
 	-output2 $project_dir/output_dir/R2_demux.fastq
 
 echo -e "\n========== Running USEARCH on RC barcodes ==========\n"
-/mnt/research/glbrc_group/benuccigmn/TOOLS/usearch11.0.667_i86linux64 \
+$usearch11 \
 	-fastx_demux $R1\
 	-reverse $R2 \
 	-index $I1 \
